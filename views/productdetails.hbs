@@ -1,0 +1,33 @@
+<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet"/>
+<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/home">Home</a></li>
+            <li><a href="/pdetails">Add Products</a></li>
+            <li role="presentation"><a href="/login">Sign Out</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Product List</h3>
+      </div>
+<form class="form-horizontal" method="POST" action="/pDetailsForm">
+  <div class="form-group">
+    <label for="ProductID">ProductID</label>
+    <input type="number" required name="pid" class="form-control" id="ProductID" placeholder="Enter Product ID" min="1" max="10000">
+  </div>
+  <div class="form-group">
+    <label for="ProductName">Product Name</label>
+    <input type="text" required name="pname" class="form-control" id="ProductName" placeholder="Enter the Product Name">
+  </div>
+  <div class="form-group">
+    <label for="ProductImage">Product Image</label>
+    <input type="text" required name="pimg" class="form-control" id="ProductImage" placeholder="Enter the Product Image Path">
+  </div>
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <input type="text" required name="pdesc" class="form-control" id="Description" placeholder="Enter text here">
+  </div>
+  <button type="submit" class="btn btn-default">Add</button>
+</form>
+</div>

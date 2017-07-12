@@ -1,0 +1,24 @@
+<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet"/>
+<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/home">Home</a></li>
+            <li><a href="/pdetails">Add Products</a></li>
+            <li role="presentation"><a href="/login">Sign Out</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Product List</h3>
+      </div>
+      <div class="row marketing">
+        {{#each data}}
+        <div class="col-lg-4">
+           <img class="img-circle" src="{{this.path}}" alt="Generic placeholder image" width="140" height="140">
+           <h2>{{this.name}}</h2>
+            <p>{{this.desc}}</p>
+            <p><a class="btn btn-primary" href="/detail?pid={{this.pid}}" role="button">View details »</a></p>
+        </div>
+         {{/each}}
+        </div>
+      </div>
